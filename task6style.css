@@ -1,0 +1,91 @@
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes move{
+    from{
+        transform: translate(1000px);
+    }to{
+        transform: translate(-1150px);
+    }
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform: translatey(0px);
+    }50%{
+        transform: translatey(-300px);
+    }
+}
+
+body{
+    margin-top: 250px;
+    background-image: url("road.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-size: 100% 100%; */
+}
+.container{
+    position: relative;
+    display: flex;
+}
+.ball{
+    border: 1px solid rebeccapurple;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* background: linear-gradient(blue,yellow); */
+    animation: rotate 1s infinite linear;
+    z-index: 10;
+    background-image: url("tyre-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 270px;
+    margin-left: 170px;
+}
+.ball1{
+    border: 1px solid rebeccapurple;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+    border-radius: 50%;
+    /* background: linear-gradient(blue,yellow); */
+    animation: rotate 1s infinite linear;
+    background-image: url("tyre-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 270px;
+    margin-left: 105px;
+    
+}
+.obstacle{
+    background-image: url("tree-removebg-preview.png");
+    padding-bottom: 40px;
+    width: 210px;
+    height: 200px;
+    z-index: 1;
+    animation: move 5s infinite;
+}
+/* hr{
+    height: 30px;
+    background-color: black;
+} */
+img{
+    position: absolute;
+    height: 300px;
+    margin-top: 70px;
+    z-index: 5;
+    /* margin-left: 0px; */
+    padding-left: 0px;
+    left: 10px;
+    top: 0px;
+}
+.car{
+    position: relative;
+    /* height: 200px; */
+
+}
